@@ -1,4 +1,40 @@
-function Consultorio(nombre, pacientes) {
+/* M5AE4 - ABP3 Ejercicio Práctico */
+
+/*PROBLEMA 1*/
+function saludar(callback) {
+    console.log("¡Buenos días!");
+    callback();
+}
+
+function ofrecerCafe() {
+    console.log("¿Quieres un café?");
+}
+saludar(ofrecerCafe);
+
+
+/*PROBLEMA 2*/
+
+function operaciones(a, b, minora, potencias) {
+    let diferencia = a - b;
+    let elevado = Math.pow(a, b);
+
+    minora(a, b, diferencia);
+    potencias(a, b, elevado);
+}
+
+operaciones(15, 3,
+    function(a, b, diferencia) {
+        console.log("La diferencia entre " + a + " y " + b + " es: " + diferencia);
+    },
+    function(a, b, elevado) {
+        console.log("Elevando " + a + " a potencia " + b + " se obtiene: " + elevado);
+    }
+);
+
+
+/* M5AE1 - ABP1 Ejercicio Práctico */
+
+/* function Consultorio(nombre, pacientes) {
     this._nombre = nombre;
     this._pacientes = pacientes || [];
 
@@ -69,4 +105,4 @@ console.log(consultorio_sapu.getNombre());
 
 consultorio_sapu.getPacientes();
 consultorio_sapu.getPacientePorNombre("Ybsen");
-consultorio_sapu.getPacientePorNombre("Valeria");
+consultorio_sapu.getPacientePorNombre("Valeria"); */
